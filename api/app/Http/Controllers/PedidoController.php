@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Pedido;
 
+//Controlador de pedidos
+
 class PedidoController extends Controller
 {
   
