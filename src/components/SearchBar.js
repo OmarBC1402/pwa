@@ -1,28 +1,41 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { dataContext } from './context/DataContext';
 
 const Busqueda = () => {
-  const [query, setQuery] = useState('');
+  const { searchProducts } = useContext(dataContext);
+  const [selectedCategory, setSelectedCategory] = useState('');
 
-  const handleInputChange = (e) => {
-    setQuery(e.target.value);
+  const handleCategoryChange = (e) => {
+    setSelectedCategory(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Query enviada:', query);
+    console.log('Categoría seleccionada:', selectedCategory);
+    // Llamar a la función de búsqueda con la categoría seleccionada
+    searchProducts(selectedCategory);
   };
 
   return (
-    <form className="search-form" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={query}
-        onChange={handleInputChange}
-        className="search-input"
-        placeholder="Buscar..."
-      />
-      <button type="submit" className="search-button">Buscar</button>
-    </form>
+    <div>
+      <form className="search-form" onSubmit={handleSubmit}>
+        <select
+          id="categorySelect"
+          value={selectedCategory}
+          onChange={handleCategoryChange}
+          className="search-input"
+        >
+          <option value="">Seleccionar...</option>
+          <option value="Herbicida">Herbicida</option>
+          <option value="Fungicida">Fungicida</option>
+          <option value="Fertilizante">Fertilizante</option>
+          <option value="Insecticida">Insecticida</option>
+        </select>
+        <button type="submit" className="search-button">
+          Buscar
+        </button>
+      </form>
+    </div>
   );
 };
 

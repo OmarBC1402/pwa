@@ -4,7 +4,8 @@ import { Auth0Provider } from '@auth0/auth0-react';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+/*
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/service-worker.js')
       .then((registration) => {
@@ -13,7 +14,7 @@ if ('serviceWorker' in navigator) {
       .catch((error) => {
         console.error('Error al registrar el Service Worker:', error);
       });
-  }
+  }*/
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

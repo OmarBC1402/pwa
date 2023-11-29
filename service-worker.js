@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-cache-v1';
+/*const CACHE_NAME = 'my-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -45,3 +45,4 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
 });
+*/

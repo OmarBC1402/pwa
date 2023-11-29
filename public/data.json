@@ -1,0 +1,66 @@
+[
+    {
+      "id": 1,
+      "nombre": "Nivela Gilfosato Concentrado",
+      "precio": 480,
+      "categoria": "Herbicida",
+      "img": "./images/Nivela.webp",
+      "quanty": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Atroplex 90 Atrazina 1kg",
+      "precio": 490,
+      "categoria": "Herbicida",
+      "img": "./images/Atroplex.jpg",
+      "quanty": 1
+    },
+    {
+      "id": 3,
+      "nombre": "Foley Clorpirifos Insecticida 950ml",
+      "precio": 380,
+      "categoria": "Insecticida",
+      "img": "./images/Foley.jpg",
+      "quanty": 1
+    },
+    {
+        "id": 4,
+        "nombre": "Insecticida Imidacloprid 800g",
+        "precio": 270,
+        "categoria": "Insecticida",
+        "img": "./images/Insecticida.webp",
+        "quanty": 1
+      },
+      {
+        "id": 5,
+        "nombre": "Mancozeb 80% ",
+        "precio": 320,
+        "categoria": "Fungicida",
+        "img": "./images/Mancozeb.webp",
+        "quanty": 1
+      },
+      {
+        "id": 6,
+        "nombre": "Azimut 1Lt",
+        "precio": 1500,
+        "categoria": "Fungicida",
+        "img": "./images/Aizmut.jpg",
+        "quanty": 1
+      },
+      {
+        "id": 7,
+        "nombre": "Urea prilada 25kg",
+        "precio": 500,
+        "categoria": "Fertilizante",
+        "img": "./images/Urea.webp",
+        "quanty": 1
+      },
+      {
+        "id": 8,
+        "nombre": "NitroPerfect+Kbron 50kg",
+        "precio": 1200,
+        "categoria": "Fertilizante",
+        "img": "./images/Nitrato.webp",
+        "quanty": 1
+      }
+  ]

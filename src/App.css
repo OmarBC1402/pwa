@@ -14,6 +14,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: safe;
+  position: sticky;
+  z-index: 3;
+  top: 0;
 }
 
 .container {
@@ -52,7 +55,7 @@ body {
 .contenido {
 	margin-top: 20px;
 	margin-bottom: 20px;
-	justify-content: center;
+	justify-content: space-around;
 }
 .subtitulo {
 	font-weight: bold;
@@ -69,17 +72,26 @@ body {
 }
 
 .contenido-cursos {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
+	
+  
 }
+
 
 .contenido-cursos-link {
     display: flex;
     width: 23%;
+	align-items: center;
 }
 
+.Contenedor-Conocenos{
+	display: flex;
+	flex-wrap: wrap;
+  }
+
 .contenido-cursos-link {
-	height: 250px;
+	height:fit-content;
 	background-color: #FFF;
 	text-align: center;
 	margin: 1%;
@@ -89,8 +101,30 @@ body {
 }
 
 .contenido-cursos-link:hover {
-	background-color: #FBEFC6 ;
+	box-shadow: 5px 5px 5px #000 ;
 }
+
+.boton-añadir {
+	border: none;
+	outline: 0;
+	padding: 10px;
+	color: white;
+	background-color: darkolivegreen;
+	text-align: center;
+	cursor: pointer;
+	width: 60%;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+
+.boton-añadir :hover{
+	box-shadow: 2px 2px 2px darkgray;
+}
+
+.imagen-producto :hover{
+	background-color: #E8F5C0;
+}
+
 
 .contenido-cursos-link a {
 	text-decoration: none;
@@ -102,6 +136,40 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+
+.hidden-select {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0;
+	border: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+  }
+
+.cartContent {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin: 30px;
+
+}
+
+.cartContent > img {
+	height: 100px;
+	width: 100px;
+	text-align: center;
+}
+
+.cartTotal {
+	text-align: center;
+	font-size: 15px;
+
+}
+
+span {
+	box-shadow: 1px 1px 1px #000;
 }
 
 .search-form {
@@ -130,6 +198,44 @@ body {
 	margin-top: 30px;
 	margin-bottom: 30px;
   }
+
+  .Contenedor-Conocenos{
+	flex-direction: column;
+  }
+
+  .Historia {
+	margin: 0 auto;
+	padding: 5px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 10px 10px #000;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	text-align: center;
+
+}
+.pago-carrito{
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 10px 10px #000;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	flex-wrap: wrap;
+}
+
+  .carrito {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 10px 10px #000;
+	margin-top: 30px;
+	margin-bottom: 30px;
+  }
   
   .contacto-titulo {
 	font-size: 32px;
@@ -141,6 +247,8 @@ body {
 	font-size: 18px;
 	margin-bottom: 30px;
   }
+
+
   
   .contacto-subtitulo {
 	font-size: 24px;
@@ -165,6 +273,8 @@ body {
 	margin-bottom: 5px;
   }
   
+
+
   .contacto-input,
   .contacto-textarea {
 	width: 95%;
@@ -189,6 +299,12 @@ body {
 	background-color: #0056b3;
 }
 
+.contenido-cursos-link {
+	flex-direction: column;
+}
+
+
+
   @media (max-width: 767px) {
 	/* Estilos específicos para móviles */
 	.header .container {
@@ -196,7 +312,22 @@ body {
 	  align-items: center;
 	  text-align: center;
 	}
-  
+	.Contenedor-Conocenos{
+		flex-direction: column;
+	}
+	.Historia {
+		width: 80%;
+	}
+    .carrito {
+		max-width: 650px;
+		margin: 0 auto;
+		padding: 20px;
+		background-color: #fff;
+		border-radius: 8px;
+		box-shadow: 0 10px 10px #000;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	  }
 	.header-nav {
 	  margin: 0;
 	  justify-content: center;
@@ -255,6 +386,40 @@ body {
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
+	  }
+
+	  .carrito {
+		min-width: 700px;
+		max-width: 980;
+		margin: 0 auto;
+		padding: 20px;
+		background-color: #fff;
+		border-radius: 8px;
+		box-shadow: 0 10px 10px #000;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	  }
+
+	  footer {
+		background-color: #000; /* Fondo negro */
+		color: white; /* Texto blanco */
+		padding: 20px;
+		text-align: center;
+	  }
+	  
+	  /* Estilos para el logo en el footer */
+	  .footer-logo {
+		width: 50px; /* Ajusta el tamaño del logo según sea necesario */
+		height: 50px;
+		margin-right: 10px;
+		vertical-align: middle;
+	  }
+	  
+	  /* Estilos para los enlaces de redes sociales */
+	  .social-links a {
+		color: white;
+		text-decoration: none;
+		margin: 0 10px;
 	  }
 	
 	  .header-nav {
