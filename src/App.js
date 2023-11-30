@@ -15,6 +15,7 @@ import EditPedido from './components/acciones/EditPedido';
 
 
 function App() {
+  
   return (
   <>
         <DataProvider>
@@ -30,10 +31,12 @@ function App() {
             <Route path="/pedido" element={ <Pedido /> } />
             <Route path="/create" element={ <CreatePedido /> } />
             <Route path="/edit" element={ <EditPedido /> } />   
-            
+
           </Route>
         </Routes>
         </DataProvider>
+
+       
   </>
   
   );

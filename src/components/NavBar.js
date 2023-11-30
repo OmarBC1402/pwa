@@ -6,6 +6,7 @@ import Login from '../pages/Login';
 import LogoutButton from './LogoutButton';
 import Profile from './Profile';
 import TotalItems from './cartContent/TotalItems';
+import LanguageSelector from "./LanguageSelector";
 
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -20,6 +21,7 @@ export const NavBar = () => {
     }
   };
 
+
   return (
     <div>
       <header className="header">
@@ -31,6 +33,7 @@ export const NavBar = () => {
             <Link to="/" className="header-nav-link">AgroInsumos</Link>
           </h1>
           <nav className="header-nav">
+            
             <Link to="/" className="header-nav-link">Inicio</Link>
             <Link to="/Conocenos" className="header-nav-link">Conócenos</Link>
             <Link to="/Contacto" className="header-nav-link">Contacto</Link>
@@ -46,6 +49,8 @@ export const NavBar = () => {
             🛒
           </Link>
           {cart.length > 0 && isAuthenticated ? <TotalItems /> : null}
+          <LanguageSelector/>
+
         </div>
       </header>
       <Outlet />

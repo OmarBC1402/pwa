@@ -1,0 +1,28 @@
+{
+    "TEST":"PRUEBA",
+  "formTitle": "Formulario de Pedido",
+  "productsLabel": "Productos",
+  "statusLabel": "Estado",
+  "newStatus": "Nuevo",
+  "totalLabel": "Total",
+  "nameLabel": "A nombre de",
+  "addressLabel": "Dirección",
+  "submitBtn": "Enviar Pedido",
+  "cartElements": {
+    "id": "ID",
+    "product": "Producto",
+    "name": "Nombre",
+    "price": "Precio",
+    "quantity": "Cantidad",
+    "remove": "Eliminar",
+        "search": {
+          "selectPlaceholder": "Seleccionar...",
+          "herbicide": "Herbicida",
+          "fungicide": "Fungicida",
+          "fertilizer": "Fertilizante",
+          "insecticide": "Insecticida",
+          "searchButton": "Buscar"
+        }
+      
+  }
+}

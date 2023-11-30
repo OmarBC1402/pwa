@@ -1,33 +1,51 @@
-const Contacto = () => {
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
+function ContactForm() {
+  const [state, handleSubmit] = useForm("meqbbvkb");
+  if (state.succeeded) {
+      return <p className='text-center'>Gracias por tu mensaje</p>;
+  }
   return (
-    <div className="contacto">
-      <h1 className="contacto-titulo">Contáctanos</h1>
-      <p className="contacto-texto">¡Nos encantaría saber de ti! Puedes ponerte en contacto con nosotros a través de los siguientes medios:</p>
-      
-      <h2 className="contacto-subtitulo">Información de Contacto</h2>
-      <p className="contacto-info">
-        Teléfono: (421) 106-7909<br />
-        Correo Electrónico: infoAgroInsumos@gmail.com
-      </p>
-
-      <h2 className="contacto-subtitulo">Formulario de Contacto</h2>
-      <form className="contacto-formulario">
-        <div className="contacto-campo">
-          <label htmlFor="nombre" className="contacto-label">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" className="contacto-input" />
-        </div>
-        <div className="contacto-campo">
-          <label htmlFor="email" className="contacto-label">Correo Electrónico:</label>
-          <input type="email" id="email" name="email" className="contacto-input" />
-        </div>
-        <div className="contacto-campo">
-          <label htmlFor="mensaje" className="contacto-label">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" rows="4" className="contacto-textarea"></textarea>
-        </div>
-        <button type="submit" className="contacto-boton">Enviar Mensaje</button>
-      </form>
+    <div className='contacto'>
+      <h1 className='contacto-titulo'>CONTACTANOS</h1>
+      <h3 className='contacto-texto'>Nos encantaria saber sobre ti, ponte en contacto con nosotros</h3>
+      <form className="contacto-formulario"onSubmit={handleSubmit}>
+      <label className='contacto-texto' htmlFor="email"><strong>
+        Direccion Email</strong>
+      </label>
+      <input
+        id="email"
+        type="email" 
+        name="email"
+      />
+      <ValidationError 
+        prefix="Email" 
+        field="email"
+        errors={state.errors}
+      />
+      <br />
+      <h3 className='contacto-texto'>Deja tu mensaje</h3>
+      <textarea 
+        id="message"
+        name="message"
+      />
+      <ValidationError 
+        prefix="Message" 
+        field="message"
+        errors={state.errors}
+      />
+      <br />
+      <button className="btn btn-primary" type="submit" disabled={state.submitting}>
+        Submit
+      </button>
+      <br />
+    </form>
     </div>
   );
 }
-
-export default Contacto;
+function App() {
+  return (
+    <ContactForm />
+  );
+}
+export default App;

@@ -1,0 +1,27 @@
+{
+    "formTitle": "Order Form",
+    "productsLabel": "Products",
+    "statusLabel": "Status",
+    "newStatus": "New",
+    "totalLabel": "Total",
+    "nameLabel": "Name",
+    "addressLabel": "Address",
+    "submitBtn": "Submit Order",
+
+    "cartElements": {
+        "id": "ID",
+        "product": "Product",
+        "name": "Name",
+        "price": "Price",
+        "quantity": "Quantity",
+        "remove": "Remove",
+        "search": {
+            "selectPlaceholder": "Select...",
+            "herbicide": "Herbicide",
+            "fungicide": "Fungicide",
+            "fertilizer": "Fertilizer",
+            "insecticide": "Insecticide",
+            "searchButton": "Search"
+          }
+      }
+}
